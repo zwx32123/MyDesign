@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>hello</title>
+    <link rel="stylesheet" href="http://necolas.github.com/normalize.css/2.0.1/normalize.css">
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+    <link rel="stylesheet" href="comm.css" type="text/css" charset="utf-8">
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=tj3VD279VoBCiWP1nTjZgrowBvteuXri"></script>
+    <!--<link rel="stylesheet" href="hello.js">-->
+    <style type="text/css">
+        /*去除百度地图版权*/
+        .anchorBL{
+            display:none;
+        }
+    </style>
+
+</head>
+<body>
+<nav>
+    <div class="nav-wrapper">
+        <a href="#" class="brand-logo" style="margin-left:10px;">热点区域分析</a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li><a href="#">整体数据分析</a></li>
+            <!--<li><a href="buttons">按钮</a></li>-->
+            <!--<li><a href="footer">页脚</a></li>-->
+        </ul>
+    </div>
+</nav>
+<div id = "container">
+    <div id= "map"></div>
+    <div id = "result">
+        <input type="datetime-local" value="2009-09-12T00:00:00"/>
+    </div>
+</div>
+</body>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/materialize.min.js"></script>
+<script type="text/javascript">
+    var map = new BMap.Map("map");          // 创建地图实例
+    var point = new BMap.Point(116.404, 39.915);  // 创建点坐标
+    map.centerAndZoom(point, 15);                 // 初始化地图，设置中心点坐标和地图级别
+</script>
+</html>
